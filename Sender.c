@@ -28,6 +28,7 @@ void Main(BMSData_s sensorData_s)
  
 }
 
+/*
 void minimum_and_maximum_value_in_incoming_stream_SensorData1(int * SensorData1 , int Range)
 {
    int min,max;
@@ -57,3 +58,4 @@ void minimum_and_maximum_value_in_incoming_stream_SensorData2(int * SensorData2 
    printf("minimum of array is : %d",min);
    printf("\nmaximum of array is : %d",max);
 }
+*/
