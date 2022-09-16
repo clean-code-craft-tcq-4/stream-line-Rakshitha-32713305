@@ -5,7 +5,7 @@
 
 TEST_CASE("positive case: test1 - reads the parameters from the console input") {
   
-  BMSData_s sensorData_s;
+  mBMSData_s sensorData_s;
 
   sensorData_s.chargeRate_minvalue = 0;
   sensorData_s.chargeRate_maxvalue = 100;
