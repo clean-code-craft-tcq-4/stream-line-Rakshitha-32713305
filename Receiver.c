@@ -16,7 +16,7 @@ void MPrintOnConsole(int * SensorData1 ,int * SensorData2 ,int Range)
   }
 }
 
-void Main(MBMSData_s sensorData_s)
+void main(MBMSData_s sensorData_s)
 { 
   int chargeRate[sensorData_s.totalNoofValues];
   int temperature[sensorData_s.totalNoofValues];
