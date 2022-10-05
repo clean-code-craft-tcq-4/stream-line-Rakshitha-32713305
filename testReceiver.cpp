@@ -3,16 +3,45 @@
 #include "catch/catch.hpp"
 #include "Receiver.h"
 
-TEST_CASE("positive case: test1 - reads the parameters from the console input") {
-  
-  mBMSData_s sensorData_s;
+#include "batterySensor.hpp"
 
-  sensorData_s.chargeRate_minvalue = 0;
-  sensorData_s.chargeRate_maxvalue = 100;
-  sensorData_s.temp_minvalue = 0;
-  sensorData_s.temp_maxvalue = 75;
-  sensorData_s.totalNoofValues = 50;
+TEST_CASE("Tests to check whether sensor data is read from console and also to check whether correct Max, Min and SMA values of sensor parameters are printed on console") 
+{
+  float Temperature_value[readings_count] = {0};
+  float SOC_value[readings_count] = {0};
+  float observedMaxValue, observedMinValue, observedSMAValue, expectedMaxValue, expectedMinValue, expectedSMAValue;
+  receiveAndProcessSensorData(&Temperature_value[0],&SOC_value[0]);
+  float expectedoutput[2][2] = {{10,10}, {11,20}};
+  for(int i=0;i<2;i++)
+  {
+    REQUIRE(Temperature_value[i] == expectedoutput[i][0]);
+    REQUIRE(SOC_value[i] == expectedoutput[i][1]);
+  }
+  //To check Max, Min and SMA values of Temperature
+  expectedMaxValue = 59;
+  expectedMinValue = 10;
+  expectedSMAValue = 57;
+  observedMaxValue = getMaxValue(&Temperature_value[0]);
+  observedMinValue = getMinValue(&Temperature_value[0]);
+  observedSMAValue = calculateSimpleMovingAverage(&Temperature_value[0]);
+  REQUIRE(observedMaxValue == expectedMaxValue);
+  REQUIRE(observedMinValue == expectedMinValue);
+  REQUIRE(observedSMAValue == expectedSMAValue);
   
-  Main(sensorData_s);  
+  //To check print to console function
+  REQUIRE(printReceivedDataToConsole(&Temperature_value[0],59,10,57) == 1);
+          
+  //To check Max, Min and SMA values of SOC
+  expectedMaxValue = 500;
+  expectedMinValue = 10;
+  expectedSMAValue = 480;
+  observedMaxValue = getMaxValue(&SOC_value[0]);
+  observedMinValue = getMinValue(&SOC_value[0]);
+  observedSMAValue = calculateSimpleMovingAverage(&SOC_value[0]);
+  REQUIRE(observedMaxValue == expectedMaxValue);
+  REQUIRE(observedMinValue == expectedMinValue);
+  REQUIRE(observedSMAValue == expectedSMAValue);
+  
+  //To check print to console function
+  REQUIRE(printReceivedDataToConsole(&SOC_value[0],500,10,480) == 1);
 }
-
