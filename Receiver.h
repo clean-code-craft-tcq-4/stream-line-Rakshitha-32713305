@@ -13,4 +13,4 @@ int totalNoofValues;
 
 void MGetSensorOutput(int minValue, int maxValue, int * Array, int Range );
 void MPrintOnConsole(int * SensorData1 ,int * SensorData2 ,int Range);
-void main(MBMSData_s sensorData_s);
+void main();
