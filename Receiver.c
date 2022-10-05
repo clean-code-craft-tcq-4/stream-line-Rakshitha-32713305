@@ -16,14 +16,7 @@ void MPrintOnConsole(int * SensorData1 ,int * SensorData2 ,int Range)
   }
 }
 
-void main(MBMSData_s sensorData_s)
+void main()
 { 
-  int chargeRate[sensorData_s.totalNoofValues];
-  int temperature[sensorData_s.totalNoofValues];
-
-  MGetSensorOutput(sensorData_s.chargeRate_minvalue,sensorData_s.chargeRate_maxvalue,chargeRate,sensorData_s.totalNoofValues);
-  MGetSensorOutput(sensorData_s.temp_minvalue,sensorData_s.temp_maxvalue,temperature,sensorData_s.totalNoofValues);
-  
-  MPrintOnConsole( &chargeRate[0], &temperature[0],sensorData_s.totalNoofValues);
  
 }
