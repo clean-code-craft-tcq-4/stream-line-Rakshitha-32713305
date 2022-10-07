@@ -12,6 +12,8 @@ TEST_CASE("Tests to check whether sensor data is read from console and also to c
   ReadParameterFromConsole(temp,soc);
   PrintDataOnConsole(temp,soc);
   
+   //To check Max, Min and SMA values of SOC
+
   expectedMinValue = 0;
   expectedMaxValue = 97;
   expectedAvgValue = 81;
@@ -22,11 +24,10 @@ TEST_CASE("Tests to check whether sensor data is read from console and also to c
   REQUIRE(observedMinValue == expectedMinValue);
   REQUIRE(observedAvgValue == expectedAvgValue);
   
-  //To check Max, Min and SMA values of SOC
-  REQUIRE(observedMaxValue == 1);
-  REQUIRE(observedMinValue == 1);
-  REQUIRE(observedAvgValue == 1);
+ 
   
+  //To check Max, Min and SMA values of SOC
+
   expectedMinValue = 2;
   expectedMaxValue = 75;
   expectedAvgValue = 35;
@@ -37,9 +38,5 @@ TEST_CASE("Tests to check whether sensor data is read from console and also to c
   REQUIRE(observedMinValue == expectedMinValue);
   REQUIRE(observedAvgValue == expectedAvgValue);
     
-  //To check Max, Min and SMA values of SOC
-  REQUIRE(observedMaxValue == 1);
-  REQUIRE(observedMinValue == 1);
-  REQUIRE(observedAvgValue == 1);
 }
 
