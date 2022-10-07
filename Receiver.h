@@ -5,3 +5,4 @@
 
 #define readings 50
 
+void call();
