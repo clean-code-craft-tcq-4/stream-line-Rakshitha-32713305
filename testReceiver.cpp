@@ -8,7 +8,15 @@ TEST_CASE("Tests to check whether sensor data is read from console and also to c
 {
   int temp[count] = {0};
   int soc[count] = {0};
- ReadParameterFromConsole(temp,soc);
- PrintDataOnConsole(temp,soc);
+  int expectedMinValue,expectedMaxValue,observedMinValue,observedMaxValue;
+  ReadParameterFromConsole(temp,soc);
+  PrintDataOnConsole(temp,soc);
   
+  expectedMinValue = 0;
+  expectedMaxValue = 75;
+  observedMinValue = MinimumValueFromIncomingStream(&temp[0]);
+  observedMinValue = MaximumValueFromIncomingStream(&temp[0]);
+  REQUIRE(observedMaxValue == expectedMaxValue);
+  REQUIRE(observedMinValue == expectedMinValue);
+}
 }
