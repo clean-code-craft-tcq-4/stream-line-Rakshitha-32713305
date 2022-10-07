@@ -6,7 +6,7 @@
 
 TEST_CASE("Tests to check whether sensor data is read from console and also to check whether correct Max, Min and SMA values of sensor parameters are printed on console") 
 {
- main();
+ call();
   
   
 }
