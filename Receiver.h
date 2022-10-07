@@ -3,7 +3,7 @@
 #include <string.h>
 
 
-#define readings_count 50
+#define readings 50
 
 void readDataFromConsole(float* Temperature, float* SOC);
 float getMaxValue(float *sensorparameter);
