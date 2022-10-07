@@ -25,7 +25,7 @@ jobs:
       run: ./Sender 
       
     - name: Pipeline Sender/Receiver
-      run: ./testSender | ./testReceiver
+      run: ./Sender | ./Receiver
  
     - name: collect coverage
       run: gcovr --gcov-exclude=".*test.*" -r . --html --html-details -o coverage.html --print-summary
