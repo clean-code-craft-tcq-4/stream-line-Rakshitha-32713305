@@ -2,7 +2,7 @@
 
 int MinimumValueFromIncomingStream(int *data)
 {
-  int i;
+  int i,min;
   min=data[0];
   
   for(i=0; i<count; i++)
@@ -23,7 +23,7 @@ int MinimumValueFromIncomingStream(int *data)
 
 int MaximumValueFromIncomingStream(int *data)
 {
-  int i;
+  int i,max;
   max=data[0];
   for(i=0; i<50; i++)
   {
@@ -38,7 +38,7 @@ int MaximumValueFromIncomingStream(int *data)
 
 void ReadParameterFromConsole(int *temp, int *soc)
 {
-  int i, min, max;
+  int i;
 
   printf("Reading the data from console\n");
   for(i=0; i<count; i++)
