@@ -30,8 +30,8 @@ void PrintDataOnConsole(int *temp, int *soc)
 void MinimumMaximumValueFromIncomingStream(int *data, int count)
 {
   int i;
-  int min=data[0];
-  int max=data[0];
+  int min[50]=data[0];
+  int max[50]=data[0];
   for(i=0; i<count; i++)
   {
     if(min>data[i])
