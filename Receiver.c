@@ -1,5 +1,23 @@
 #include "Receiver.h"
 
+void MinimumMaximumValueFromIncomingStream(int *data, int count)
+{
+  int i;
+  int min=data[0];
+  int max=data[0];
+  for(i=0; i<count; i++)
+  {
+    if(min>data[i])
+      min=data[i];
+    if(max<data[i])
+      max=data[i];  
+  }
+  
+  printf("Minimum value from incoming stream is %d\n", min);
+  printf("Maximum value from incoming stream is %d\n", max);
+    
+}
+
 void ReadParameterFromConsole(int *temp, int *soc)
 {
   int i;
@@ -25,24 +43,5 @@ void PrintDataOnConsole(int *temp, int *soc)
     printf("%d,%d\n",temp[i],soc[i]);
   }
   
-}
-
-void MinimumMaximumValueFromIncomingStream(int *data, int count)
-{
-  int i;
-  int min=data[0];
-  int max=data[0];
-  for(i=0; i<count; i++)
-  {
-    if(min>data[i])
-      min=data[i];
-    if(max<data[i])
-      max=data[i];  
-  }
-  
-  printf("Minimum value from incoming stream is %d\n", min);
-  printf("Maximum value from incoming stream is %d\n", max);
-    
-}
-                                 
+}                              
 
