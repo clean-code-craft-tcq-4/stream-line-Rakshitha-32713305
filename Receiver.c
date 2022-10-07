@@ -1,21 +1,26 @@
 #include "Receiver.h"
 
-void MinimumMaximumValueFromIncomingStream(int *data)
+void MinimumValueFromIncomingStream(int *data, int min)
 {
   int i;
   int min=data[0];
-  int max=data[0];
   for(i=0; i<count; i++)
   {
     if(min>data[i])
-      min=data[i];
+      min=data[i]; 
+  }
+    
+}
+
+void MaximumValueFromIncomingStream(int *data, int max)
+{
+  int i;
+  int max=data[0];
+  for(i=0; i<count; i++)
+  {
     if(max<data[i])
       max=data[i];  
-  }
-  
-  printf("Minimum Temperature value from incoming stream is %d\n", min);
-  printf("Maximum SOC value from incoming stream is %d\n", max);
-    
+  }    
 }
 
 void ReadParameterFromConsole(int *temp, int *soc)
@@ -28,8 +33,11 @@ void ReadParameterFromConsole(int *temp, int *soc)
     scanf("%d,%d\n",&temp[i],&soc[i]);
   }
   
-  MinimumMaximumValueFromIncomingStream(temp);
-  MinimumMaximumValueFromIncomingStream(soc);
+  MinimumValueFromIncomingStream(temp,min);
+  MaximumValueFromIncomingStream(temp,max);
+  
+  MinimumValueFromIncomingStream(soc,min);
+  MaximumValueFromIncomingStream(soc,max);
 }
 
 void PrintDataOnConsole(int *temp, int *soc)
