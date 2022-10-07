@@ -1,6 +1,6 @@
 #include "Receiver.h"
 
-int main()
+void call()
 {
   int temp[50];
   int soc[50];
@@ -18,6 +18,13 @@ int main()
   {
     printf("%d,%d\n", *temp[i], *soc[i]);
   }
+  
+}
+
+int main()
+{
+  call();
+  
   
   return 0;
 }
