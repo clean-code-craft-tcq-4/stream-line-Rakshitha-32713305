@@ -18,7 +18,7 @@ TEST_CASE("Tests to check whether sensor data is read from console and also to c
   printf("print the data from console\n");
   for(i=0; i<50; i++)
   {
-    printf("%d, %d", *temp[i], *soc[i]);
+    printf("%d, %d", temp[i], soc[i]);
   }
  
   
