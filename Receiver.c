@@ -1,6 +1,6 @@
 #include "Receiver.h"
 
-void MinimumValueFromIncomingStream(int *data, int min)
+int MinimumValueFromIncomingStream(int *data)
 {
   int i;
   min=data[0];
@@ -18,9 +18,10 @@ void MinimumValueFromIncomingStream(int *data, int min)
     }
   }
     
+  return min;
 }
 
-void MaximumValueFromIncomingStream(int *data, int max)
+int MaximumValueFromIncomingStream(int *data)
 {
   int i;
   max=data[0];
@@ -31,11 +32,13 @@ void MaximumValueFromIncomingStream(int *data, int max)
       max=data[i];  
     }
   }    
+  
+  return max;
 }
 
-void ReadParameterFromConsole(int *temp, int *soc, int min, int max)
+void ReadParameterFromConsole(int *temp, int *soc)
 {
-  int i;
+  int i, min, max;
 
   printf("Reading the data from console\n");
   for(i=0; i<count; i++)
@@ -43,15 +46,15 @@ void ReadParameterFromConsole(int *temp, int *soc, int min, int max)
     scanf("%d,%d\n",&temp[i],&soc[i]);
   }
   
-  MinimumValueFromIncomingStream(temp,min);
+  min = MinimumValueFromIncomingStream(temp);
   printf("minimum value of temperature is %d\n", min);
-  MaximumValueFromIncomingStream(temp,max);
+  max = MaximumValueFromIncomingStream(temp);
   printf("maximum value of temperature is %d\n", max);
   
   
-  MinimumValueFromIncomingStream(soc,min);
+  min = MinimumValueFromIncomingStream(soc);
   printf("minimum value of soc is %d\n", min);
-  MaximumValueFromIncomingStream(soc,max);
+  max = MaximumValueFromIncomingStream(soc);
   printf("maximum value of soc is %d\n", max);
 }
 
