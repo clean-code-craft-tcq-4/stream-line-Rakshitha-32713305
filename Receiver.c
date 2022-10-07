@@ -11,9 +11,6 @@ void call()
     scanf("%d,%d\n",&temp[i],&soc[i]);
   }
     
-  
-  
-  printf("print the data from console\n");
   for(i=0; i<50; i++)
   {
     printf("%d,%d\n",temp[i],soc[i]);
