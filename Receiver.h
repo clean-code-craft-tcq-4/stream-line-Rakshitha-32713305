@@ -7,5 +7,5 @@
 
 void ReadParameterFromConsole(int *temp, int *soc, int min, int max);
 void PrintDataOnConsole(int *temp, int *soc);
-void MinimumValueFromIncomingStream(int *data, int min);
-void MaximumValueFromIncomingStream(int *data, int max);
+void MinimumValueFromIncomingStream(int *data);
+void MaximumValueFromIncomingStream(int *data);
