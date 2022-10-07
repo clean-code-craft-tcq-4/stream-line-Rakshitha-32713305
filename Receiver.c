@@ -1,16 +1,16 @@
 #include "Receiver.h"
 
-void ReadParameterFromConsole()
+void ReadParameterFromConsole(int *temp, int *soc)
 {
-
-  int i=0;
   printf("Reading the data from console\n");
-  for(i=0; i<50; i++)
+  for(i=0; i<count; i++)
   {
     scanf("%d,%d\n",&temp[i],&soc[i]);
   }
-    
-  for(i=0; i<50; i++)
+}
+
+void PrintDataOnConsole(int *temp, int *soc)
+  for(i=0; i<count; i++)
   {
     printf("%d,%d\n",temp[i],soc[i]);
   }
