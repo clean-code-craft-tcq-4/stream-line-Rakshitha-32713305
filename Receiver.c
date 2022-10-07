@@ -20,12 +20,3 @@ void call()
   }
   
 }
-
-int main()
-{
-  call();
-  
-  
-  return 0;
-}
-      
