@@ -23,7 +23,7 @@ void MaximumValueFromIncomingStream(int *data, int max)
   }    
 }
 
-void ReadParameterFromConsole(int *temp, int *soc)
+void ReadParameterFromConsole(int *temp, int *soc, int min, int max)
 {
   int i;
 
