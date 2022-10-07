@@ -6,5 +6,7 @@
 
 TEST_CASE("Tests to check whether sensor data is read from console and also to check whether correct Max, Min and SMA values of sensor parameters are printed on console") 
 {
-  
+  int num;
+  printf("enter 1number\n");
+  scanf("%d", &num);
 }
