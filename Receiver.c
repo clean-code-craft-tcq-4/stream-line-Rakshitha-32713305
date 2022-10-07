@@ -31,6 +31,18 @@ int MaximumValueFromIncomingStream(int *data)
   return max;
 }
 
+float calculateSimpleMovingAverage(int *data)
+{
+  float SMAvalue = 0.0;
+  float total = 0.0;
+  for(int index = (count-5); index < count; index++)
+  {
+    total += data[index];
+  }
+  SMAvalue = total/5; 
+  return SMAvalue;
+}
+
 void ReadParameterFromConsole(int *temp, int *soc)
 {
   int i,min,max;
@@ -45,12 +57,15 @@ void ReadParameterFromConsole(int *temp, int *soc)
   printf("minimum value of temperature is %d\n", min);
   max = MaximumValueFromIncomingStream(temp);
   printf("maximum value of temperature is %d\n", max);
-  
+  average = calculateSimpleMovingAverage(temp);
+  printf("average of temperature is %f\n", temp);
   
   min = MinimumValueFromIncomingStream(soc);
   printf("minimum value of soc is %d\n", min);
   max = MaximumValueFromIncomingStream(soc);
   printf("maximum value of soc is %d\n", max);
+  average = calculateSimpleMovingAverage(soc);
+  printf("average of soc is %f\n", soc);
 }
 
 void PrintDataOnConsole(int *temp, int *soc)
