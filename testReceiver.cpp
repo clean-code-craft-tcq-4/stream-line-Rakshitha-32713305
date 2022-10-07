@@ -10,7 +10,7 @@ TEST_CASE("Tests to check whether sensor data is read from console and also to c
   int soc[count] = {0};
   int min = 0;
   int max =0;
- ReadParameterFromConsole(temp,soc,min,max);
+ ReadParameterFromConsole(temp,soc);
  PrintDataOnConsole(temp,soc);
   
 }
