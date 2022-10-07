@@ -2,6 +2,7 @@
 
 void ReadParameterFromConsole(int *temp, int *soc)
 {
+  int i;
   printf("Reading the data from console\n");
   for(i=0; i<count; i++)
   {
@@ -10,6 +11,8 @@ void ReadParameterFromConsole(int *temp, int *soc)
 }
 
 void PrintDataOnConsole(int *temp, int *soc)
+{
+  int i;
   for(i=0; i<count; i++)
   {
     printf("%d,%d\n",temp[i],soc[i]);
