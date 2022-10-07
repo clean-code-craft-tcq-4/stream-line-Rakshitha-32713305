@@ -27,15 +27,17 @@ void PrintDataOnConsole(int *temp, int *soc)
   
 }
 
-void MinimumMaximumValueFromIncomingStream(int data, int count)
+void MinimumMaximumValueFromIncomingStream(int *data, int count)
 {
-  int min=max=a[0];
-  for(i=1; i<n; i++)
+  int i;
+  int min=data[0];
+  int max=data[0];
+  for(i=0; i<count; i++)
   {
-    if(min>a[i])
-      min=a[i];
-    if(max<a[i])
-		  max=a[i];  
+    if(min>data[i])
+      min=data[i];
+    if(max<data[i])
+      max=data[i];  
   }
   
   printf("Minimum value from incoming stream is %d\n", min);
