@@ -6,7 +6,7 @@ void MinimumValueFromIncomingStream(int *data, int min)
   min=data[0];
   for(i=0; i<count; i++)
   {
-    if(min>data[i])
+    if(data[i] < min)
     {
       min=data[i]; 
     }
@@ -20,7 +20,7 @@ void MaximumValueFromIncomingStream(int *data, int max)
   max=data[0];
   for(i=0; i<count; i++)
   {
-    if(max<data[i])
+    if(data[i] > max)
     {
       max=data[i];  
     }
