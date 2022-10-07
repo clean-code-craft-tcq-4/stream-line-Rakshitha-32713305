@@ -35,9 +35,11 @@ void ReadParameterFromConsole(int *temp, int *soc, int min, int max)
   
   MinimumValueFromIncomingStream(temp,min);
   MaximumValueFromIncomingStream(temp,max);
+  printf("minimum value of temperature is %d, and maximum value of temperature is %d\n", min, max);
   
   MinimumValueFromIncomingStream(soc,min);
   MaximumValueFromIncomingStream(soc,max);
+  printf("minimum value of soc is %d, and maximum value of soc is %d\n", min, max);
 }
 
 void PrintDataOnConsole(int *temp, int *soc)
