@@ -1,5 +1,6 @@
 #include "Receiver.h"
 
+//to check the minimum of incoming stream data
 int MinimumValueFromIncomingStream(int *data)
 {
   int i,min;
@@ -16,6 +17,7 @@ int MinimumValueFromIncomingStream(int *data)
   return min;
 }
 
+//to check the maximum of incoming stream data
 int MaximumValueFromIncomingStream(int *data)
 {
   int i,max;
@@ -31,6 +33,7 @@ int MaximumValueFromIncomingStream(int *data)
   return max;
 }
 
+//to calculate the average of incoming stream data
 float calculateSimpleMovingAverage(int *data)
 {
   float SMAvalue = 0.0;
