@@ -2,7 +2,7 @@
 
 void readDataFromConsole(float* Temperature, float* SOC)
 {
-  for(int index = 0; index < readings_count; index++)
+  for(int index = 0; index < readings; index++)
   {
     scanf("%f:%f\n",&Temperature[index],&SOC[index]);    
   }
@@ -11,7 +11,7 @@ void readDataFromConsole(float* Temperature, float* SOC)
 float getMaxValue(float *sensorparameter)
 {
   float maximumvalue = sensorparameter[0];
-  for(int index = 0; index < readings_count; index++)
+  for(int index = 0; index < readings; index++)
   {
     if(sensorparameter[index] > maximumvalue)
     {
@@ -24,7 +24,7 @@ float getMaxValue(float *sensorparameter)
 float getMinValue(float *sensorparameter)
 {
   float minimumvalue = sensorparameter[0]; 
-  for(int index = 0; index < readings_count; index++)
+  for(int index = 0; index < readings; index++)
   {
     if(sensorparameter[index] < minimumvalue)
     {
@@ -38,7 +38,7 @@ float calculateSimpleMovingAverage(float *sensorparameter)
 {
   float SMAvalue = 0.0;
   float total = 0.0;
-  for(int index = (readings_count-5); index < readings_count; index++)
+  for(int index = (readings-5); index < readings; index++)
   {
     total += sensorparameter[index];
   }
@@ -49,7 +49,7 @@ float calculateSimpleMovingAverage(float *sensorparameter)
 int printReceivedDataToConsole(float *sensorparameter, float maxvalue, float minvalue, float SMA)
 {
   printf("Data received from sender\n");
-  for(int index = 0; index < readings_count; index++)
+  for(int index = 0; index < readings; index++)
   {
     printf("%f\n",sensorparameter[index]);
   }
