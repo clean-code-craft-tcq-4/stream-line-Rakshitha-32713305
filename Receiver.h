@@ -3,6 +3,6 @@
 #include <string.h>
 
 
-#define readings 50
+#define count 50
 
 void call();
