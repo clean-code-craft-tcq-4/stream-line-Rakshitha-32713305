@@ -6,8 +6,9 @@
 
 TEST_CASE("Tests to check whether sensor data is read from console and also to check whether correct Max, Min and SMA values of sensor parameters are printed on console") 
 {
-// int temp[count] = {}
- call();
+  int temp[count] = {0};
+  int soc[count] = {0};
   
+ ReadParameterFromConsole(temp,soc)
   
 }
