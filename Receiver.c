@@ -1,9 +1,8 @@
 #include "Receiver.h"
 
-void call()
+void ReadParameterFromConsole()
 {
-  int temp[50] = {0};
-  int soc[50] = {0};
+
   int i=0;
   printf("Reading the data from console\n");
   for(i=0; i<50; i++)
