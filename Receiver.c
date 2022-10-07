@@ -8,7 +8,7 @@ void call()
   printf("Reading the data from console\n");
   for(i=0; i<50; i++)
   {
-    scanf("%f,%f\n",&temp[i],&soc[i]);
+    scanf("%d,%d\n",&temp[i],&soc[i]);
   }
     
   
@@ -16,7 +16,7 @@ void call()
   printf("print the data from console\n");
   for(i=0; i<50; i++)
   {
-    printf("%f,%f\n",**temp[i],**soc[i]);
+    printf("%d,%d\n",*temp[i],*soc[i]);
   }
   
 }
