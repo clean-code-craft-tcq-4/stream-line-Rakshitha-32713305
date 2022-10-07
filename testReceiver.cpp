@@ -8,7 +8,7 @@ TEST_CASE("Tests to check whether sensor data is read from console and also to c
 {
   int temp[count] = {0};
   int soc[count] = {0};
-  int expectedMinValue,expectedMaxValue,observedMinValue,observedMaxValue,observedAvgValue;
+  int expectedMinValue,expectedMaxValue,observedMinValue,observedMaxValue,observedAvgValue,expectedAvgValue;
   ReadParameterFromConsole(temp,soc);
   PrintDataOnConsole(temp,soc);
   
