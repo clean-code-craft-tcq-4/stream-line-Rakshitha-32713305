@@ -38,7 +38,7 @@ int MaximumValueFromIncomingStream(int *data)
 
 void ReadParameterFromConsole(int *temp, int *soc)
 {
-  int i;
+  int i,min,max;
 
   printf("Reading the data from console\n");
   for(i=0; i<count; i++)
