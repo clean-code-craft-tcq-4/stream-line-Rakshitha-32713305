@@ -2,8 +2,8 @@
 
 void call()
 {
-  int temp[50];
-  int soc[50];
+  int *temp[50];
+  int *soc[50];
   int i=0;
   printf("Reading the data from console\n");
   for(i=0; i<50; i++)
