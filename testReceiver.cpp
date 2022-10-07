@@ -13,9 +13,16 @@ TEST_CASE("Tests to check whether sensor data is read from console and also to c
   PrintDataOnConsole(temp,soc);
   
   expectedMinValue = 0;
-  expectedMaxValue = 75;
+  expectedMaxValue = 97;
   observedMinValue = MinimumValueFromIncomingStream(&temp[0]);
   observedMaxValue = MaximumValueFromIncomingStream(&temp[0]);
+  REQUIRE(observedMaxValue == expectedMaxValue);
+  REQUIRE(observedMinValue == expectedMinValue);
+  
+  expectedMinValue = 0;
+  expectedMaxValue = 97;
+  observedMinValue = MinimumValueFromIncomingStream(&soc[0]);
+  observedMaxValue = MaximumValueFromIncomingStream(&soc[0]);
   REQUIRE(observedMaxValue == expectedMaxValue);
   REQUIRE(observedMinValue == expectedMinValue);
 }
