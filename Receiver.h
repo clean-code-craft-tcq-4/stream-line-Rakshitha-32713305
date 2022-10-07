@@ -5,4 +5,5 @@
 
 #define count 50
 
-void call();
+void ReadParameterFromConsole(int *temp, int *soc);
+void PrintDataOnConsole(int *temp, int *soc);
