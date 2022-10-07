@@ -1,14 +1,5 @@
 #include "Receiver.h"
 
-void readDataFromConsole(float* Temperature, float* SOC)
-{
-  for(int index = 0; index < readings_count; index++)
-  {
-    scanf("%f:%f\n",&Temperature[index],&SOC[index]);    
-  }
-}
-
-/*
 void call()
 {
   int temp[50] = {0};
@@ -29,4 +20,4 @@ void call()
   }
   
 }
-*/
+
