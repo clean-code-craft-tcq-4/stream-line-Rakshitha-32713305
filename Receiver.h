@@ -5,7 +5,7 @@
 
 #define count 50
 
-void ReadParameterFromConsole(int *temp, int *soc, int min, int max);
+void ReadParameterFromConsole(int *temp, int *soc);
 void PrintDataOnConsole(int *temp, int *soc);
 int MinimumValueFromIncomingStream(int *data);
 int MaximumValueFromIncomingStream(int *data);
