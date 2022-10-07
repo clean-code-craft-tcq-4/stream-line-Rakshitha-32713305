@@ -26,7 +26,7 @@ TEST_CASE("Tests to check whether sensor data is read from console and also to c
   
   expectedMinValue = 2;
   expectedMaxValue = 75;
-  expectedAvgValue = 5;
+  expectedAvgValue = 35;
   observedMinValue = MinimumValueFromIncomingStream(&soc[0]);
   observedMaxValue = MaximumValueFromIncomingStream(&soc[0]);
   observedAvgValue = calculateSimpleMovingAverage(&soc[0]);
