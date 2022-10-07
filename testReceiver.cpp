@@ -6,7 +6,9 @@
 
 TEST_CASE("Tests to check whether sensor data is read from console and also to check whether correct Max, Min and SMA values of sensor parameters are printed on console") 
 {
-  int temp[50],soc[50],i=0;
+  int *temp[50];
+  int *soc[50];
+  int i=0;
   printf("Reading the data from console\n");
   for(i=0; i<50; i++)
   {
