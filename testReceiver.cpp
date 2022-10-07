@@ -8,5 +8,5 @@ TEST_CASE("Tests to check whether sensor data is read from console and also to c
 {
   int num;
   printf("enter 1number\n");
-  scanf("%d", &num);
+  scanf("%f", &num);
 }
