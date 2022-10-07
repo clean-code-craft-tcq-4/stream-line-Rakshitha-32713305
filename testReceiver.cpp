@@ -12,7 +12,7 @@ TEST_CASE("Tests to check whether sensor data is read from console and also to c
   printf("Reading the data from console\n");
   for(i=0; i<50; i++)
   {
-    scanf("%d:%d\n", &temp[i], &soc[i]);
+    scanf("%d,%d\n", &temp[i], &soc[i]);
   }
     
   
@@ -20,7 +20,7 @@ TEST_CASE("Tests to check whether sensor data is read from console and also to c
   printf("print the data from console\n");
   for(i=0; i<50; i++)
   {
-    printf("%d:%d\n", temp[i], soc[i]);
+    printf("%d,%d\n", temp[i], soc[i]);
   }
  
   
