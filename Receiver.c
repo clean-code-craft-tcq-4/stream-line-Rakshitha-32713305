@@ -4,6 +4,12 @@ void MinimumValueFromIncomingStream(int *data, int min)
 {
   int i;
   min=data[0];
+  
+  for(i=0; i<count; i++)
+  {
+    printf("%d\n",data[i]);
+  }
+  
   for(i=0; i<50; i++)
   {
     if(data[i] < min)
