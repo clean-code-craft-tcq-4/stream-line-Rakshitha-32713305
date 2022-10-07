@@ -6,7 +6,7 @@
 
 TEST_CASE("Tests to check whether sensor data is read from console and also to check whether correct Max, Min and SMA values of sensor parameters are printed on console") 
 {
-  float Temperature_value[readings] = {10};
+  float Temperature_value[readings] = {11};
   float SOC_value[readings] = {10};
   float observedMaxValue, observedMinValue, observedSMAValue, expectedMaxValue, expectedMinValue, expectedSMAValue;
   receiveAndProcessSensorData(&Temperature_value[0],&SOC_value[0]);
