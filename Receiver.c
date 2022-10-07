@@ -1,6 +1,6 @@
 #include "Receiver.h"
 
-void MinimumMaximumValueFromIncomingStream(int *data, int count)
+void MinimumMaximumValueFromIncomingStream(int *data)
 {
   int i;
   int min=data[0];
@@ -31,8 +31,8 @@ void ReadParameterFromConsole(int *temp, int *soc)
     //soc_buffer[i] = soc[i];
   }
   
-  MinimumMaximumValueFromIncomingStream(temp, count);
-  MinimumMaximumValueFromIncomingStream(soc, count);
+  MinimumMaximumValueFromIncomingStream(temp);
+  MinimumMaximumValueFromIncomingStream(soc);
 }
 
 void PrintDataOnConsole(int *temp, int *soc)
