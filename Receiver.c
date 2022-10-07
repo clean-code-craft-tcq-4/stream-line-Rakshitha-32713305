@@ -2,8 +2,8 @@
 
 int main()
 {
-  int *temp[50];
-  int *soc[50];
+  int temp[50];
+  int soc[50];
   int i=0;
   printf("Reading the data from console\n");
   for(i=0; i<50; i++)
@@ -16,7 +16,7 @@ int main()
   printf("print the data from console\n");
   for(i=0; i<50; i++)
   {
-    printf("%d,%d\n", temp[i], soc[i]);
+    printf("%d,%d\n", *temp[i], *soc[i]);
   }
   
   return 0;
