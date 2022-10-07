@@ -10,8 +10,9 @@ void GetSensorOutput(int minValue, int maxValue, int * Array, int Range )
 
 void PrintOnConsole(int * SensorData1 ,int * SensorData2 ,int Range)
 {
+    printf("The output\n");
   for(int data = 0; data < Range ; data ++)
-  {
+  {  
       printf("%d,%d\n", SensorData1[data], SensorData2[data]);
   }
 }
