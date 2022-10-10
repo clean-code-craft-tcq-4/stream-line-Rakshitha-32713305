@@ -46,6 +46,7 @@ float calculateSimpleMovingAverage(int *data)
   return SMAvalue;
 }
 
+//to check and print the maximum and minimum values in the incoming stream
 void ReadParameterFromConsole(int *temp, int *soc)
 {
   int min,max;
