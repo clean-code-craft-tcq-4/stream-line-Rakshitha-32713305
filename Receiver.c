@@ -3,14 +3,14 @@
 //to check the minimum of incoming stream data
 int MinimumValueFromIncomingStream(int *data)
 {
-  int i,min;
+  int min;
   min=data[0];
   
-  for(i=0; i<count; i++)
+  for(int index=0; index<count; index++)
   {
-    if(data[i] < min)
+    if(data[index] < min)
     {
-      min=data[i]; 
+      min=data[index]; 
     }
   }
     
@@ -20,7 +20,7 @@ int MinimumValueFromIncomingStream(int *data)
 //to check the maximum of incoming stream data
 int MaximumValueFromIncomingStream(int *data)
 {
-  int i,max;
+  int max;
   max=data[0];
   for(int index=0; index<count; index++)
   {
