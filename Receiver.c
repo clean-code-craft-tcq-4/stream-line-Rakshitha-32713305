@@ -63,14 +63,14 @@ void ReadParameterFromConsole(int *temp, int *soc)
   max = MaximumValueFromIncomingStream(temp);
   printf("Maximum value of temperature is %d\n", max);
   average = calculateSimpleMovingAverage(temp);
-  printf("Average of temperature is %f\n", temp);
+  printf("Average of temperature is %f\n", average);
   
   min = MinimumValueFromIncomingStream(soc);
   printf("Minimum value of soc is %d\n", min);
   max = MaximumValueFromIncomingStream(soc);
   printf("Maximum value of soc is %d\n", max);
   average = calculateSimpleMovingAverage(soc);
-  printf("Average of soc is %f\n", soc);
+  printf("Average of soc is %f\n", average);
 }
 
 void PrintDataOnConsole(int *temp, int *soc)
