@@ -33,7 +33,7 @@ int MaximumValueFromIncomingStream(int *data)
   return max;
 }
 
-//to calculate the average of incoming stream data
+//to calculate the simple moving average of the last 5 values of incoming stream data
 float calculateSimpleMovingAverage(int *data)
 {
   float SMAvalue = 0.0;
@@ -63,14 +63,14 @@ void ReadParameterFromConsole(int *temp, int *soc)
   max = MaximumValueFromIncomingStream(temp);
   printf("Maximum value of temperature is %d\n", max);
   average = calculateSimpleMovingAverage(temp);
-  printf("Average of temperature is %f\n", average);
+  printf("simple moving average of the last 5 values of temperature is %f\n", average);
   
   min = MinimumValueFromIncomingStream(soc);
   printf("Minimum value of soc is %d\n", min);
   max = MaximumValueFromIncomingStream(soc);
   printf("Maximum value of soc is %d\n", max);
   average = calculateSimpleMovingAverage(soc);
-  printf("Average of soc is %f\n", average);
+  printf("simple moving average of the last 5 values of soc is %f\n", average);
 }
 
 void PrintDataOnConsole(int *temp, int *soc)
