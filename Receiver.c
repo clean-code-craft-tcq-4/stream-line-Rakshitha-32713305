@@ -6,7 +6,7 @@ int MinimumValueFromIncomingStream(int *data)
   int i,min;
   min=data[0];
   
-  for(i=0; i<50; i++)
+  for(i=0; i<count; i++)
   {
     if(data[i] < min)
     {
@@ -22,11 +22,11 @@ int MaximumValueFromIncomingStream(int *data)
 {
   int i,max;
   max=data[0];
-  for(i=0; i<50; i++)
+  for(int index=0; index<count; index++)
   {
-    if(data[i] > max)
+    if(data[index] > max)
     {
-      max=data[i];  
+      max=data[index];  
     }
   }    
   
@@ -48,36 +48,36 @@ float calculateSimpleMovingAverage(int *data)
 
 void ReadParameterFromConsole(int *temp, int *soc)
 {
-  int i,min,max;
+  int min,max;
   float average;
 
   printf("Reading the data from console\n");
-  for(i=0; i<count; i++)
+  for(int index=0; index<count; index++)
   {
-    scanf("%d,%d\n",&temp[i],&soc[i]);
+    scanf("%d,%d\n",&temp[index],&soc[index]);
   }
   
   min = MinimumValueFromIncomingStream(temp);
-  printf("minimum value of temperature is %d\n", min);
+  printf("Minimum value of temperature is %d\n", min);
   max = MaximumValueFromIncomingStream(temp);
-  printf("maximum value of temperature is %d\n", max);
+  printf("Maximum value of temperature is %d\n", max);
   average = calculateSimpleMovingAverage(temp);
-  printf("average of temperature is %f\n", temp);
+  printf("Average of temperature is %f\n", temp);
   
   min = MinimumValueFromIncomingStream(soc);
-  printf("minimum value of soc is %d\n", min);
+  printf("Minimum value of soc is %d\n", min);
   max = MaximumValueFromIncomingStream(soc);
-  printf("maximum value of soc is %d\n", max);
+  printf("Maximum value of soc is %d\n", max);
   average = calculateSimpleMovingAverage(soc);
-  printf("average of soc is %f\n", soc);
+  printf("Average of soc is %f\n", soc);
 }
 
 void PrintDataOnConsole(int *temp, int *soc)
 {
   int i;
-  for(i=0; i<count; i++)
+  for(int index=0; index<count; index++)
   {
-    printf("%d,%d\n",temp[i],soc[i]);
+    printf("%d,%d\n",temp[index],soc[index]);
   }
   
 }                              
